@@ -86,7 +86,7 @@ extension Preferences {
 			@ViewBuilder content: @escaping () -> Content
 		) {
 			let textLabel = {
-				Text(title)
+				Text(LocalizedStringKey(title))
 					.font(.system(size: 13.0))
 					.overlay(LabelOverlay())
 					.eraseToAnyView()
