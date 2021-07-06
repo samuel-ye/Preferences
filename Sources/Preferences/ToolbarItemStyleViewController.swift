@@ -37,7 +37,7 @@ final class ToolbarItemStyleViewController: NSObject, PreferencesStyleController
 		}
 
 		let toolbarItem = NSToolbarItem(itemIdentifier: preferenceIdentifier.toolbarItemIdentifier)
-		toolbarItem.label = preference.preferencePaneTitle
+		toolbarItem.label = Bundle.main.localizedString(forKey: preference.preferencePaneTitle, value: preference.preferencePaneTitle, table: nil)
 		toolbarItem.image = preference.toolbarItemIcon
 		toolbarItem.target = self
 		toolbarItem.action = #selector(toolbarItemSelected)

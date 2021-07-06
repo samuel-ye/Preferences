@@ -95,7 +95,7 @@ final class PreferencesTabViewController: NSViewController, PreferencesStyleCont
 	private func updateWindowTitle(tabIndex: Int) {
 		window.title = {
 			if preferencePanes.count > 1 {
-				return preferencePanes[tabIndex].preferencePaneTitle
+				return Bundle.main.localizedString(forKey: preferencePanes[tabIndex].preferencePaneTitle, value: preferencePanes[tabIndex].preferencePaneTitle, table: nil)
 			} else {
 				let preferences = Localization[.preferences]
 				let appName = Bundle.main.appName
